@@ -66,23 +66,14 @@ int main()
 		cout << "Write number to check: ";
 	    cin >> num;
 
-		for(size_t i = 2; i < 10; i++ )
-		{
-		   if(num != i){
-
-			  if((num%i) == 0)
-			  {
+		for(size_t i = 2; i < num; i++ )
+		{  
+			if((num%i) == 0)
+			{
 			 	check = false;
 				break;
-			  }
-			  
-		   }
-		   else
-		   {
-			   break;
-		   }
+			}			
 		}
-
 		(check) ? cout << "Your number is simple" : cout << "Your number is`t simple";
 		cout << "\n";
 	}
