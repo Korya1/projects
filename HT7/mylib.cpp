@@ -1,4 +1,7 @@
 #include <iostream>
+#include <string>
+#include <fstream>
+#include "mylib.h"
 
 #define CHECKNUMS(x, y) ((x) >= 0 ? (x) < (y) ? true : false : false)
 #define SwapINT(a, b) {int c = a; a = b; b = c;}
@@ -107,4 +110,32 @@ void bubbleSort() //sorting array with bubble algorithm
 	
 	printArr(arr, SIZEARR);
 	std::cout << "\n" << "\n";
+}
+
+void emFun() // work with dynamic struct
+{
+	Employee* em1 = new Employee;
+
+	em1->id = 111338877;
+	em1->age = 28;
+	em1->name = "Vasya";
+	em1->salary = 11'000;
+
+	std::cout << em1->id << "\n";
+	std::cout << em1->age << "\n";
+	std::cout << em1->name << "\n";
+	std::cout << em1->salary << "\n";
+
+	std::cout << "\nStruct size: " << sizeof(em1) << "\n";
+
+	std::ofstream fout("myStruct.txt");
+
+	fout << em1->id << "\n";
+	fout << em1->age << "\n";
+	fout << em1->name << "\n";
+	fout << em1->salary << "\n";
+
+	fout.close();
+
+	delete em1;
 }

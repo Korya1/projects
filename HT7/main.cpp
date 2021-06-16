@@ -48,30 +48,7 @@ int main()
 	std::cout << "Task 4" << 
 		"\n=================\n";
 
-	Employee* em1 = new Employee;
-
-	em1->id = 99338877;
-	em1->age = 28;
-	em1->name = "Vasya";
-	em1->salary = 11'000;	
-
-	std::cout << em1->id << "\n";
-	std::cout << em1->age << "\n";
-	std::cout << em1->name << "\n";
-	std::cout << em1->salary << "\n";
-
-	std::cout << "\nStruct size: " << sizeof(em1) << "\n";
-
-	std::ofstream fout("myStruct.txt");
-
-	fout << em1->id << "\n";
-	fout << em1->age << "\n";
-	fout << em1->name << "\n";
-	fout << em1->salary << "\n";
-
-	fout.close();
-
-	delete em1;
+	emFun();
 //==============================================
 
 	return 0;

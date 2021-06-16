@@ -17,6 +17,8 @@ void bubbleSort(); //sorting array with bubble algorithm
 int printArr(int* pArr, const int SIZE); // print array
 
 //----4
+void emFun(); // work with dynamic struct
+
 #pragma pack(push, 1)
 struct Employee // struct employee
 {
